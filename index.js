@@ -36,7 +36,7 @@ app.post('/sms', (req, res) => {
          messagingServiceSid: 'MG7303e8ec0e4f230feefcf6df16f16924',      
          to: req.body.number 
        }) 
-      .then(message => console.log(message.sid)) 
+      .then(message => res.send({sent:true})) 
       .done();
 })
 
